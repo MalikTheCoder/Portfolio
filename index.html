@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/M.png" />
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <script
@@ -11,27 +12,27 @@
     ></script>
   </head>
   <body>
+    <div class="header-top">
+      <p>Made by Malik Azumi <i class="fa-solid fa-heart"></i></p>
+    </div>
     <div id="header">
       <div class="container">
         <nav>
-          <img
-            src="images/maliklogo.png"
-            alt="image of the logo"
-            class="logo"
-          />
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Strengths</a></li>
             <li><a href="#portfolio">Interests</a></li>
+            <li><a href="#blog">Journey</a></li>
             <li><a href="#contact">Contact</a></li>
+
             <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-          <p>Web developer</p>
           <h1>Hi, I'm <span>Malik Azumi</span></h1>
+          <p>Junior Developer</p>
         </div>
       </div>
     </div>
@@ -49,10 +50,14 @@
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
             <p>
-              I am an aspiring developer who has the ability to create stunning
-              websites that are visually pleasing as well as functional. I have
-              a strong foundation of HTML, CSS and Javascript as well as
-              constantly teaching myself new languages such as React or Python.
+              I am an aspiring software developer looking for a role to express
+              my coding skills and join a team of senior developers to learn
+              from. I have experience in both front and and back-end
+              technologies, with specialisiation in JavaScript and frameworks
+              such as React and Node.js. I have a passion for software and have
+              created personal projects such as a Magic the gathering
+              deck-building website and other fun projects like a discord bot
+              using the discord API.
             </p>
 
             <div class="tab-titles">
@@ -63,9 +68,23 @@
                 Experience
               </p>
               <p class="tab-links" onclick="opentab('education')">Education</p>
+
+              <p class="tab-links" onclick="opentab('projects')">Projects</p>
             </div>
+
             <div class="tab-contents active-tab" id="skills">
               <ul>
+                <li><span>Web Developer</span><br />Desgining Websites</li>
+                <li>
+                  <span>Independent learner</span><br />Self-taught developer
+                </li>
+                <li>
+                  <span>Proficient in multiple languages</span><br />HTML
+                  <br />
+                  CSS <br />JavaScript<br />
+                  React<br />
+                  Python
+                </li>
                 <li><span>Web Developer</span><br />Desgining Websites</li>
                 <li><span>Independent learner</span><br />Self-taught</li>
                 <li>
@@ -103,6 +122,51 @@
                 </li>
               </ul>
             </div>
+            <div class="tab-contents" id="projects">
+              <ul>
+                <li>
+                  <span>Personal portfolio</span><br />I created this personal
+                  portoflio to demonstrate my front-end skills and allow me to
+                  have a website I can consistently work on and upload new
+                  projects. This was my first full stack project using HTML,
+                  CSS, JavaScript and React as the stack. In the future I plan
+                  to include previews to my projects as well as adding more
+                  features such as a "blog" section that I will use to track my
+                  learning progress.
+                </li>
+                <li>
+                  <span
+                    >MTG deck-building app<br /><a
+                      href="https://malikthecoder.github.io/MTG-deck-builder/"
+                      target="_blank"
+                      >Click here to go to the deck-builder app</a
+                    ></span
+                  ><br />Created a magic the gathering deck building tool that
+                  allows the user to search for any card using the Scryfall API.
+                  This project was created to demonstrate my working knowledge
+                  of using RESTful API's and JavaScript skills. I plan to
+                  implement features such as an autofill section that would
+                  allow the user to build a deck and then use the cards they
+                  uploaded in their collection to autofill their deck and
+                  highlight which cards they are missing from their deck; then
+                  they would have links to purchase the missing cards to
+                  complete their deck. This is my most ambitious project yet
+                  that I am planning to continually expand on.
+                </li>
+                <li>
+                  <span>Calendar app</span><br />
+                  I'm someone that loves structure and planning their days out.
+                  I decided that a standard calendar is a bit boring for me so I
+                  decided to create a calendar app that would allow me to keep
+                  the functionality of a standard calendar but at the same time
+                  allow me to implement my own fun features and designs. This
+                  project was mainly to practice localstorage as well as
+                  design/UI aspects however as I expanded on it I found myself
+                  getting lost in implementing new features and will continue to
+                  update and add features as time continues.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -118,23 +182,26 @@
             <h2>Web Development</h2>
             <p>
               I have spent years developing and honing my skills as a developer
-              and I've become comfortable with multiple web-oriented coding
-              languages.
+              with a focus on front-end languages such as HTML, CSS and
+              JavaScript as well as frameworks like React & Node.JS
             </p>
             <a href="#"></a>
           </div>
           <div>
             <i class="fa-solid fa-pen-nib"></i>
             <h2>UI Design</h2>
-            <p>Using HTML and CSS to create stunning interfaces.</p>
+            <p>
+              Using clever designs to create aesthetically pleasing interactive
+              interfaces
+            </p>
             <a href="#"></a>
           </div>
           <div>
             <i class="fa-solid fa-brain"></i>
-            <h2>Creative thinking</h2>
+            <h2>Code === Life</h2>
             <p>
-              Ability to think outside the box and apply creative solutions to
-              problems.
+              A long history of coding and a true passion for the industry;
+              always creating solutions to problems I'm facing
             </p>
             <a href="#"></a>
           </div>
@@ -160,7 +227,11 @@
             </div>
           </div>
           <div class="work">
-            <img src="images/mtg1.jpg" alt="" height="500px" />
+            <img
+              src="images/magic-the-gathering-player-cards-hand.jpg"
+              alt=""
+              height="500px"
+            />
             <div class="layer">
               <h3>Card games!</h3>
               <p>
@@ -181,33 +252,198 @@
         </div>
       </div>
     </div>
+
+    <!-- Blog Section HTML -->
+    <div id="blog">
+      <div class="container">
+        <h1 class="sub-title">My Coding Journey</h1>
+        <p class="blog-intro"></p>
+
+        <div class="blog-list">
+          <div class="blog-post">
+            <div class="blog-date">June 2022 - Present</div>
+            <h3 class="blog-title">
+              Creating projects, completing courses & more!
+            </h3>
+            <p class="blog-excerpt">
+              I'm working on my coding skills every day and with each project I
+              complete and course I finish I grow to love this industry more. I
+              am especially excited with my most recent Magic the Gathering
+              Deck-building website which I will link below!
+            </p>
+            <a
+              href="https://malikthecoder.github.io/MTG-deck-builder/"
+              class="read-more"
+              target="_blank"
+              >Click here!</a
+            >
+          </div>
+
+          <div class="blog-post">
+            <div class="blog-date">June 2022</div>
+            <h3 class="blog-title">
+              Finish my BTEC and begin working as a Telesales Advisor
+            </h3>
+            <p class="blog-excerpt">
+              I started my role at Virgin Media as a telesales advisor to gain
+              work experience as well as income to buy my first beloved Thinkpad
+              which I still use to code and run on Ubuntu.
+            </p>
+            <a href="blog-posts/css-grid-flexbox.html" class="read-more"></a>
+          </div>
+
+          <div class="blog-post">
+            <div class="blog-date">September 2020</div>
+            <h3 class="blog-title">Beginning of my Coding Journey</h3>
+            <p class="blog-excerpt">
+              Starting a BTEC in computer science at the Manchester college
+              ignited my passion for coding and I have been learning ever since.
+            </p>
+            <a href="blog-posts/js-array-methods.html" class="read-more"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      #blog {
+        padding: 80px 0;
+        background: #111111;
+      }
+
+      .blog-intro {
+        margin-bottom: 40px;
+        text-align: center;
+        color: #ababab;
+      }
+
+      .blog-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 40px;
+      }
+
+      .blog-post {
+        background: #262626;
+        padding: 30px;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .blog-post:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(255, 0, 79, 0.2);
+      }
+
+      .blog-date {
+        font-size: 14px;
+        color: #ababab;
+        margin-bottom: 10px;
+      }
+
+      .blog-title {
+        color: #fff;
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+
+      .blog-excerpt {
+        color: #ababab;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .read-more {
+        display: inline-block;
+        color: #ff004f;
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+      }
+      .read-more::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        background: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        transition: width 0.3s;
+      }
+
+      .read-more:hover::after {
+        width: 100%;
+      }
+
+      .blog-admin {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      /* Mobile Responsiveness */
+      @media only screen and (max-width: 600px) {
+        .blog-list {
+          grid-template-columns: 1fr;
+        }
+
+        .blog-post {
+          padding: 20px;
+        }
+      }
+    </style>
+
     <!--------Contact------->
     <div id="contact">
       <div class="container">
         <div class="row">
           <div class="contact-left">
             <h1 class="sub-title">Contact Me</h1>
-            <p><i class="fa-solid fa-paper-plane"></i>Malik.azumi@Yahoo.com</p>
-            <p><i class="fa-solid fa-mobile-retro"></i>07389817305</p>
+            <p class="contact-info">
+              <i class="fa-solid fa-paper-plane"></i>
+              malik.azumi@yahoo.com
+            </p>
+            <p class="contact-info">
+              <i class="fa-solid fa-mobile-retro"></i>
+              07389817305
+            </p>
+
             <div class="social-icons">
               <a
                 href="https://www.linkedin.com/in/malik-azumi-70267428a/"
+                title="Click on me to go to my LinkedIn page!"
                 target="_blank"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
               <a
                 href="https://www.facebook.com/profile.php?id=100010694222165"
+                title="Click on me to go to my Facebook page!"
                 target="_blank"
                 ><i class="fa-brands fa-facebook"></i
               ></a>
-              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a
+                href="https://github.com/MalikTheCoder"
+                title="Click on me to go to my Github page!"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+
               <a
                 href="https://www.instagram.com/maliksprivatex/"
                 target="_blank"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
             </div>
-            <a href="" class="btn btn2">Download CV</a>
+            <a
+              href="files/UpdatedJDCV.pdf"
+              class="btn btn2"
+              download="Malik_Azumi_CV(2025).pdf"
+            >
+              <span>D</span><span>o</span><span>w</span><span>n</span
+              ><span>l</span><span>o</span><span>a</span><span>d</span>
+
+              <span>C</span><span>V</span><span>!</span>
+            </a>
           </div>
           <div class="contact-right">
             <form name="submit-to-google-sheet">
