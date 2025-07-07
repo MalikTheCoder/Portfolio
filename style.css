@@ -78,6 +78,11 @@ nav ul li a:hover::after {
   color: #ff004f;
 }
 
+.header-text h1 span a {
+  text-decoration: none;
+  color: #ff004f;
+}
+
 /*----------about-section---------*/
 
 #about {
