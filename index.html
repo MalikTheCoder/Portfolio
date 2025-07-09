@@ -38,7 +38,7 @@
               ></span
             >
           </h1>
-          <p>Junior Developer</p>
+          <p>Aspiring Developer</p>
         </div>
       </div>
     </div>
@@ -57,8 +57,8 @@
             <h1 class="sub-title">About Me</h1>
             <p>
               I am an aspiring software developer looking for a role to express
-              my coding skills and join a team of senior developers to learn
-              from. I have experience in both front and and back-end
+              my coding skills and join a team of experienced developers to
+              learn from. I have experience in both front and and back-end
               technologies, with specialisiation in JavaScript and frameworks
               such as React and Node.js. I have a passion for software and have
               created personal projects such as a Magic the gathering
@@ -313,8 +313,7 @@
             </h3>
             <p class="journey-excerpt">
               I started my role at Virgin Media as a telesales advisor to gain
-              work experience as well as income to buy my first beloved Thinkpad
-              which I still use to code and run on Ubuntu.
+              work experience as well as income to buy my first high end PC.
             </p>
           </div>
 
@@ -407,52 +406,8 @@
         <p>Made by Malik Azumi <i class="fa-solid fa-heart"></i></p>
       </div>
     </div>
-    <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
+    <script src="app.js"></script>
 
-      function opentab(tabname) {
-        for (tablink of tablinks) {
-          tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      }
-    </script>
-
-    <script>
-      var sidemenu = document.getElementById("sidemenu");
-
-      function openmenu() {
-        sidemenu.style.right = "0";
-      }
-
-      function closemenu() {
-        sidemenu.style.right = "-200px";
-      }
-    </script>
-
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbzdm3HQTCcIuj6SUNvGUK2ak-kgOInWQjfFn7VePEStTrnUjnRHXSpTu60jNR6o8V_o/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            msg.innerHTML = "Message sent successfully";
-            setTimeout(function () {
-              msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
+    <!--- This will be used later to format the "message sent" correctly <script></script> -->
   </body>
 </html>
